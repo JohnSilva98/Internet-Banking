@@ -47,30 +47,32 @@ namespace SisBanco
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
             //Criar string de conexão
-            SqlConnection conexao = new SqlConnection("Data Source=JOHNJOHN\\SQLEXPRESS;Initial Catalog=SisBanco;Integrated Security=True");
+            SqlConnection conexao = new SqlConnection("Data Source=DESKTOP-Q91HNJM\\SQLDEV;Initial Catalog=Banco;Integrated Security=True");
             Random numeroID = new Random();
             numeroID.Next();
 
             //Criar string de inserção sql
-            string sql = "insert into cadastrar (idCadastro,Nome, cpf, Sexo, telefone, celular, senha, numeroConta) values (@idCadastro,@Nome, @cpf, @Sexo, @telefone, @celular, @senha, @numeroConta)";
-
+            string sql = "insert into cadastrar (Nome, Cpf, Sexo, Telefone, Celular, Senha, numeroConta) values (@Nome, @Cpf, @Sexo, @Telefone, @Celular, @Senha, @numeroConta)";
+            
             try
             {
                 //criar comandos sql
                 SqlCommand comando = new SqlCommand(sql, conexao);
+               
 
                 //inserção de dados da txtbox
-                comando.Parameters.Add(new SqlParameter("@idCadastro", numeroID.Next()));
+                //comando.Parameters.Add(new SqlParameter("@idCadastro", numeroID.Next()));
                 comando.Parameters.Add(new SqlParameter("@Nome", this.txtNome.Text));
-                comando.Parameters.Add(new SqlParameter("@cpf", this.txtCPF.Text));
+                comando.Parameters.Add(new SqlParameter("@Cpf", this.txtCPF.Text));
                 comando.Parameters.Add(new SqlParameter("@Sexo", this.cmBoxSex.Text));
-                comando.Parameters.Add(new SqlParameter("@telefone", this.txtTel.Text));
-                comando.Parameters.Add(new SqlParameter("@celular", this.txtCel.Text));
-                comando.Parameters.Add(new SqlParameter("@senha", this.txtSenha.Text));
+                comando.Parameters.Add(new SqlParameter("@Telefone", this.txtTel.Text));
+                comando.Parameters.Add(new SqlParameter("@Celular", this.txtCel.Text));
+                comando.Parameters.Add(new SqlParameter("@Senha", this.txtSenha.Text));
                 comando.Parameters.Add(new SqlParameter("@numeroConta", this.txtNumConta.Text));
                 
                 //abrir conexao
                 conexao.Open();
+              
 
                 //Executar comando no banco
                 comando.ExecuteNonQuery();
