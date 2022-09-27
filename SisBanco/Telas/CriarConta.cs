@@ -47,12 +47,12 @@ namespace SisBanco
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
             //Criar string de conexão
-            SqlConnection conexao = new SqlConnection("Data Source=JOHNJOHN\\SQLEXPRESS;Initial Catalog=SisBanco;Integrated Security=True");
+            SqlConnection conexao = new SqlConnection("Data Source=DESKTOP-Q91HNJM\\SQLDEV;Initial Catalog=banco;Integrated Security=True");
             Random numeroID = new Random();
             numeroID.Next();
 
             //Criar string de inserção sql
-            string sql = "insert into cadastrar (idCadastro,Nome, cpf, Sexo, telefone, celular, senha, numeroConta) values (@idCadastro,@Nome, @cpf, @Sexo, @telefone, @celular, @senha, @numeroConta)";
+            string sql = "insert into cadastrar (idCadastro,Nome, cpf, Sexo, telefone, celular, senha, numeroConta) values (@idCadastro,@Nome, @Cpf, @Sexo, @Telefone, @Celular, @Senha, @numeroConta)";
 
             try
             {

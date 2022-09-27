@@ -22,7 +22,7 @@ namespace SisBanco
         private void btnEntrar_Click(object sender, EventArgs e)
         {
             //Criar string de conexão
-            SqlConnection conexao = new SqlConnection("Data Source=JOHNJOHN\\SQLEXPRESS;Initial Catalog=SisBanco;Integrated Security=True");
+            SqlConnection conexao = new SqlConnection("Data Source=DESKTOP-Q91HNJM\\SQLDEV;Initial Catalog=banco;Integrated Security=True");
             conexao.Open();
             SqlCommand comando = new SqlCommand();
             comando.CommandText = "Select * from cadastrar where numeroConta = @numConta and senha = @senha";
