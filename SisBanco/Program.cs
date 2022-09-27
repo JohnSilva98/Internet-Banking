@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SisBanco.Telas;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -14,9 +15,10 @@ namespace SisBanco
         [STAThread]
         static void Main()
         {
+           
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new intInicio());
+            Application.Run(new SplashScreen());
         }
     }
 }

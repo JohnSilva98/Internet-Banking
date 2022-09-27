@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SisBanco.Telas;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,7 +27,8 @@ namespace SisBanco
 
         private void btnDepositar_Click(object sender, EventArgs e)
         {
-
+            TelaDeposito deposito = new TelaDeposito();
+            deposito.Show();
         }
     }
 }

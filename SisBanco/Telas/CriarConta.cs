@@ -48,8 +48,7 @@ namespace SisBanco
         {
             //Criar string de conexão
             SqlConnection conexao = new SqlConnection("Data Source=DESKTOP-Q91HNJM\\SQLDEV;Initial Catalog=Banco;Integrated Security=True");
-            Random numeroID = new Random();
-            numeroID.Next();
+           
 
             //Criar string de inserção sql
             string sql = "insert into cadastrar (Nome, Cpf, Sexo, Telefone, Celular, Senha, numeroConta) values (@Nome, @Cpf, @Sexo, @Telefone, @Celular, @Senha, @numeroConta)";
