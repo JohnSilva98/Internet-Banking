@@ -39,26 +39,30 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(133, 46);
+            this.label1.Location = new System.Drawing.Point(177, 57);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(388, 18);
+            this.label1.Size = new System.Drawing.Size(484, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "Bem- vindo(a), selecione a opção desejada abaixo";
             // 
             // btnDepositar
             // 
-            this.btnDepositar.Location = new System.Drawing.Point(12, 110);
+            this.btnDepositar.Location = new System.Drawing.Point(16, 135);
+            this.btnDepositar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDepositar.Name = "btnDepositar";
-            this.btnDepositar.Size = new System.Drawing.Size(118, 52);
+            this.btnDepositar.Size = new System.Drawing.Size(157, 64);
             this.btnDepositar.TabIndex = 1;
             this.btnDepositar.Text = "Depositar";
             this.btnDepositar.UseVisualStyleBackColor = true;
+            this.btnDepositar.Click += new System.EventHandler(this.btnDepositar_Click);
             // 
             // btnLogout
             // 
-            this.btnLogout.Location = new System.Drawing.Point(519, 110);
+            this.btnLogout.Location = new System.Drawing.Point(692, 135);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(118, 52);
+            this.btnLogout.Size = new System.Drawing.Size(157, 64);
             this.btnLogout.TabIndex = 4;
             this.btnLogout.Text = "Sair";
             this.btnLogout.UseVisualStyleBackColor = true;
@@ -66,32 +70,35 @@
             // 
             // btnSaldo
             // 
-            this.btnSaldo.Location = new System.Drawing.Point(385, 110);
+            this.btnSaldo.Location = new System.Drawing.Point(513, 135);
+            this.btnSaldo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSaldo.Name = "btnSaldo";
-            this.btnSaldo.Size = new System.Drawing.Size(118, 52);
+            this.btnSaldo.Size = new System.Drawing.Size(157, 64);
             this.btnSaldo.TabIndex = 3;
             this.btnSaldo.Text = "Saldo";
             this.btnSaldo.UseVisualStyleBackColor = true;
             // 
             // btnSaque
             // 
-            this.btnSaque.Location = new System.Drawing.Point(136, 110);
+            this.btnSaque.Location = new System.Drawing.Point(181, 135);
+            this.btnSaque.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSaque.Name = "btnSaque";
-            this.btnSaque.Size = new System.Drawing.Size(118, 52);
+            this.btnSaque.Size = new System.Drawing.Size(157, 64);
             this.btnSaque.TabIndex = 2;
             this.btnSaque.Text = "Saque";
             this.btnSaque.UseVisualStyleBackColor = true;
             // 
             // LoginSuccess
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(649, 261);
+            this.ClientSize = new System.Drawing.Size(865, 321);
             this.Controls.Add(this.btnSaldo);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnSaque);
             this.Controls.Add(this.btnDepositar);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "LoginSuccess";
             this.Text = "Internet Banking ";
             this.ResumeLayout(false);

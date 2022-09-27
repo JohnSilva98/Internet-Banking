@@ -23,5 +23,10 @@ namespace SisBanco
             MessageBox.Show("Obrigado por usar o Internet Banking !");
             this.Close();
         }
+
+        private void btnDepositar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
